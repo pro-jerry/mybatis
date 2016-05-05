@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.mybatis.pojo.Country;
 
-public interface CountryMapper {
+public interface CountryMapper{
     int deleteByPrimaryKey(Integer id);
 
     int insert(Country record);
