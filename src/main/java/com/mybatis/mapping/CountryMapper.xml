@@ -36,6 +36,16 @@
     delete from country
     where Id = #{id,jdbcType=INTEGER}
   </delete>
+  
+  <insert id="insertCountry" parameterType="java.util.ArrayList" useGeneratedKeys="true">
+    insert into country (Id, countryname, countrycode
+      )
+    values 
+    <foreach collection="list" separator="," item="item">
+    	(#{item.id},#{item.countryname},#{item.countrycode})
+    </foreach>
+  </insert>
+  
   <insert id="insert" parameterType="com.mybatis.pojo.Country" >
     insert into country (Id, countryname, countrycode
       )

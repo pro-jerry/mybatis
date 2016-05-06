@@ -7,7 +7,19 @@ public class Country {
 
     private String countrycode;
 
-    public Integer getId() {
+    public Country() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Country(Integer id, String countryname, String countrycode) {
+		super();
+		this.id = id;
+		this.countryname = countryname;
+		this.countrycode = countrycode;
+	}
+
+	public Integer getId() {
         return id;
     }
 

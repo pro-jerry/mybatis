@@ -1,4 +1,4 @@
-package com.mybatis.pageHelp;
+package com.mybatis;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

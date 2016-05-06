@@ -1,5 +1,7 @@
 package com.mybatis.dao;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -22,4 +24,7 @@ public interface CountryMapper{
 	List<Country> selectCountryByPage(@Param("start") int start, @Param("number")Integer number);
 
 	int selectCount();
+	
+    void insertCountry(ArrayList<Country> list);
+	
 }
