@@ -8915,3 +8915,27 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 57; columnNumber: 22; cvc-
 [INFO] [2016-03-24 23:50:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/toLogin.*] onto handler 'loginController'
 [INFO] [2016-03-24 23:50:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/toLogin/] onto handler 'loginController'
 [INFO] [2016-03-24 23:50:46][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 391 ms
+[INFO] [2016-04-18 23:19:19][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-04-18 23:19:19][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Mon Apr 18 23:19:19 GMT+08:00 2016]; root of context hierarchy
+[INFO] [2016-04-18 23:19:19][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-04-18 23:19:21][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-04-18 23:19:21][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 2264 ms
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-04-18 23:19:22][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Mon Apr 18 23:19:22 GMT+08:00 2016]; parent: Root WebApplicationContext
+[INFO] [2016-04-18 23:19:22][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/show] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/show.*] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/show/] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/listCountry] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/listCountry.*] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/easyui/listCountry/] onto handler 'easyUIController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/doLogin] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/doLogin.*] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/doLogin/] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/toLogin] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/toLogin.*] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/toLogin/] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/getMenu] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/getMenu.*] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/login/getMenu/] onto handler 'loginController'
+[INFO] [2016-04-18 23:19:22][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 897 ms
