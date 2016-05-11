@@ -1,4 +1,4 @@
-package com.mybatis.corejava;
+package com.mybatis.corejava.url;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class URLConnectionTest {
 		try{
 			String urlName;
 			if(args.length>0) urlName=args[0];
-			else urlName="http://horstmann.com";
+			else urlName="http://www.baidu.com";
 			
 			URL url = new URL(urlName);
 			URLConnection connection = url.openConnection();

@@ -1,4 +1,4 @@
-package com.mybatis.corejava;
+package com.mybatis.corejava.url;
 
 import java.io.FilterOutputStream;
 import java.io.IOException;
