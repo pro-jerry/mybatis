@@ -1,12 +1,14 @@
 package com.mybatis.dao;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
 import com.mybatis.pojo.Country;
 
-public interface CountryMapper {
+public interface CountryMapper{
     int deleteByPrimaryKey(Integer id);
 
     int insert(Country record);
@@ -22,4 +24,7 @@ public interface CountryMapper {
 	List<Country> selectCountryByPage(@Param("start") int start, @Param("number")Integer number);
 
 	int selectCount();
+	
+    void insertCountry(ArrayList<Country> list);
+	
 }
