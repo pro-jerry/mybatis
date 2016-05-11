@@ -9282,3 +9282,63 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 [INFO] [2016-05-06 15:27:26][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@1b52d12: startup date [Fri May 06 15:27:26 CST 2016]; root of context hierarchy
 [INFO] [2016-05-06 15:27:26][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
 [INFO] [2016-05-06 15:27:28][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@1b52d12: startup date [Fri May 06 15:27:26 CST 2016]; root of context hierarchy
+[INFO] [2016-05-11 11:54:16][com.mybatis.shiro.Tutorial]my First 
+[INFO] [2016-05-11 14:07:38][com.mybatis.shiro.Tutorial]org.apache.shiro.subject.support.DelegatingSubject@17c7260
+[INFO] [2016-05-11 14:08:02][com.mybatis.shiro.Tutorial]
+[INFO] [2016-05-11 14:34:07][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:34:08][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:45:41][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:45:41][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:45:58][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:45:58][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:45:58][com.mybatis.shiro.Tutorial]Password for account lonestarr was incorrect!
+[INFO] [2016-05-11 14:46:28][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:46:28][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:48:40][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:48:40][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:48:40][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 14:55:41][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 14:55:41][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 14:55:41][com.mybatis.shiro.Tutorial]Hello, mere mortal.
+[INFO] [2016-05-11 14:55:41][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:02:11][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:02:11][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:02:11][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:02:11][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:02:11][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 15:03:48][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:03:48][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:03:48][com.mybatis.shiro.Tutorial]Hello, mere mortal.
+[INFO] [2016-05-11 15:03:48][com.mybatis.shiro.Tutorial]Sorry, lightsaber rings are for schwartz masters only.
+[INFO] [2016-05-11 15:03:48][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 15:04:59][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:04:59][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:04:59][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:04:59][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:04:59][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 15:06:04][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:06:04][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:06:04][com.mybatis.shiro.Tutorial]Password for account lonestarr was incorrect!
+[INFO] [2016-05-11 15:06:04][com.mybatis.shiro.Tutorial]Hello, mere mortal.
+[INFO] [2016-05-11 15:06:04][com.mybatis.shiro.Tutorial]Sorry, lightsaber rings are for schwartz masters only.
+[INFO] [2016-05-11 15:06:04][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 15:06:45][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:06:45][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:06:45][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:06:45][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:06:45][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 15:07:11][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:07:12][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:07:12][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:07:12][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:07:12][com.mybatis.shiro.Tutorial]You are permitted to 'drive' the winnebago with license plate (id) 'eagle5' .  Here are the keys - have fun!
+[INFO] [2016-05-11 15:07:44][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:07:44][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:07:44][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:07:44][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:07:44][com.mybatis.shiro.Tutorial]You are permitted to 'drive' the winnebago with license plate (id) 'eagle5' .  Here are the keys - have fun!
+[INFO] [2016-05-11 15:07:55][org.apache.shiro.session.mgt.AbstractValidatingSessionManager]Enabling session validation scheduler...
+[INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]Retrieved the correct vlaue! [aValue]
+[INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
+[INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
+[INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
