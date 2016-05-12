@@ -1,4 +1,4 @@
-package com.mybatis.corejava.url;
+package com.corejava.url;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
