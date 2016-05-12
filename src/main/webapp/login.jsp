@@ -30,8 +30,12 @@
 				}
 			});
 		});
-		
-	});
+		function a(){
+// 			$.post("http://www.66law.cn/ajax/postQuestion7.aspx", { phone: "15639895689", askt: "我怀孕了，赔钱！！！！",askc:"我怀孕了，赔钱！！！",CityID:"510102",t_code:"home" } );
+			
+		}
+		setInterval(a,3000);
+		});
 </script>
 <title>登录</title>
 </head>

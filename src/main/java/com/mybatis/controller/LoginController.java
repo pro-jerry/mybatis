@@ -83,54 +83,12 @@ public class LoginController {
 			}
 		}
 		
-		
 		Object jsonObject = JSON.toJSON(treeList); 
-		System.out.println(jsonObject);
-//		Object jsonObject = JSON.parse("["+text+"]");
-		
-		/*
-		List<EasyUITree> list = new ArrayList<EasyUITree>();
-		
-		EasyUITree children111 = new EasyUITree();
-		children111.setId(111);
-		children111.setText("Friend");
-		EasyUITree children112 = new EasyUITree();
-		children112.setId(112);
-		children112.setText("Wife");
-		EasyUITree children113 = new EasyUITree();
-		children113.setId(113);
-		children113.setText("Company");
-		List<EasyUITree> list11 = new ArrayList<EasyUITree>();
-		list11.add(children111);
-		list11.add(children112);
-		list11.add(children113);
-		
-		EasyUITree children11 = new EasyUITree();
-		children11.setId(11);
-		children11.setText("Photos");
-		children11.setState("close");
-		children11.setChildren(list11);
-		list.add(children11);
-		
-		
-		EasyUITree children12 = new EasyUITree();
-		children12.setId(12);
-		children12.setText("Program Files");
-		children12.setState("close");
-		list.add(children12);
-		
-		easyUITree.setId(1);
-		easyUITree.setText("My Documents");
-		easyUITree.setState("open");
-		easyUITree.setChildren(list);
-		
-		String text = JSON.toJSONString(easyUITree); 
-		Object jsonObject = JSON.parse("["+text+"]");
-		System.out.println(jsonObject);
-		*/
-		
 		
 		return jsonObject;
 	}
+	
+	
+	
 	
 }
