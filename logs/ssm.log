@@ -9342,3 +9342,4 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 [INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]May the Schwartz be with you!
 [INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]You may use a lightsaber ring. Use it wisely.
 [INFO] [2016-05-11 15:07:55][com.mybatis.shiro.Tutorial]Sorry, you aren't allowed to drive the 'eagle5' winnebago!
+[INFO] [2016-05-11 16:00:47][com.corejava.serializable.SerializableTest]保存成功
