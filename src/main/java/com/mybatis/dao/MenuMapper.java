@@ -24,4 +24,8 @@ public interface MenuMapper {
 	List<Menu> getMenuByPid(@Param("pid") Integer id);
 
 	List<Menu> getMenuByPidIsNull();
+
+	List<Menu> getMenuByScort();
+
+	Menu getMenuById(int id);
 }

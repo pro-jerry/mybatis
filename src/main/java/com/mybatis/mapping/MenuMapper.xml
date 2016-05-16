@@ -12,7 +12,19 @@
     id, pid, name, level, scort
   </sql>
   
+  <select id="getMenuById" resultMap="BaseResultMap">
   
+  	select 
+    <include refid="Base_Column_List" />
+    from menu where id=#{id,jdbcType=INTEGER}
+  </select>
+  
+  <select id="getMenuByScort" resultMap="BaseResultMap">
+  
+  	select 
+    <include refid="Base_Column_List" />
+    from menu 
+  </select>
   <select id="getMenuByPidIsNull" resultMap="BaseResultMap">
   
   	select 

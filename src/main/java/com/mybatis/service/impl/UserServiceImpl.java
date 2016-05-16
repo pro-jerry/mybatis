@@ -44,4 +44,15 @@ public class UserServiceImpl implements UserService{
 		return menuMapper.getMenuByPidIsNull();
 	}
 
+	@Override
+	public List<Menu> getMenuByScort() {
+		
+		return menuMapper.getMenuByScort();
+	}
+
+	@Override
+	public Menu getById(int lastNum) {
+		return menuMapper.getMenuById(lastNum);
+	}
+
 }

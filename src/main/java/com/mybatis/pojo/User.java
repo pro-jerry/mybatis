@@ -1,5 +1,10 @@
 package com.mybatis.pojo;
 
+/**
+ * <a href="http://blog.csdn.net/zwx19921215/article/details/44467099"/>
+ * @author jerry
+ *
+ */
 public class User {
     private Integer id;
 
