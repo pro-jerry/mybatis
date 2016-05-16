@@ -191,6 +191,19 @@
 		<artifactId>asm</artifactId>
 		<version>3.3.1</version>
 	</dependency>
+	<!-- http://mvnrepository.com/artifact/org.ow2.asm/asm-commons -->
+	<dependency>
+	    <groupId>org.ow2.asm</groupId>
+	    <artifactId>asm-commons</artifactId>
+	    <version>5.0.4</version>
+	</dependency>
+	<!-- http://mvnrepository.com/artifact/asm/asm-tree -->
+	<dependency>
+	    <groupId>asm</groupId>
+	    <artifactId>asm-tree</artifactId>
+	    <version>3.3.1</version>
+	</dependency>
+	
 	
   </dependencies>
   <build>

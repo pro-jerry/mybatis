@@ -85,7 +85,7 @@ public class LoginController {
 								EasyUITree easyUITree3 = new EasyUITree();
 								easyUITree3.setId(menu3.getId());
 								easyUITree3.setState("close");
-								easyUITree3.setText(menu2.getName());
+								easyUITree3.setText(menu3.getName());
 								treeListSunzi.add(easyUITree3);
 							}
 						}
