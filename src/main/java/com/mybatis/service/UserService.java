@@ -19,4 +19,6 @@ public interface UserService {
 
 	Menu getById(int lastNum);
 
+	List<Menu> getMenuByUserId(int id);
+
 }

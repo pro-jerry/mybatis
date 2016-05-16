@@ -13,6 +13,8 @@
     id, username, password, name, Email, phone
   </sql>
   
+  
+  
    <select id="getUser" resultMap="BaseResultMap"  >
     select 
     <include refid="Base_Column_List" />

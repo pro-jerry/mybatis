@@ -8,6 +8,7 @@ import com.mybatis.pojo.Menu;
 import com.mybatis.pojo.User;
 
 public interface UserMapper {
+	
     int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
@@ -23,4 +24,5 @@ public interface UserMapper {
 	User getUser(@Param("username") String username,@Param("password") String password);
 
 	List<Menu> getAllMenu();
+
 }
