@@ -103,6 +103,12 @@ public class LoginController {
 		return jsonObject;
 	}
 	
+	
+	/**
+	 * <href http://blog.csdn.net/zwx19921215/article/details/44467099/>
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("getMenu1")
 	@ResponseBody
 	public Object  getMenu1(HttpServletRequest request){
