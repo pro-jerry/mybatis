@@ -21,7 +21,7 @@
 		</div>
 		<div data-options="region:'south',split:true" style="height:50px;"></div>
 		<div data-options="region:'east',split:true" title="East" style="width:180px;">
-			<ul id="east_tree" class="easyui-tree" data-options="url:'${prc}/login/getMenu.htm',method:'get',animate:true,dnd:true"></ul>
+			<ul id="east_tree" class="easyui-tree" data-options="url:'${prc}/login/getMenu.htm',method:'get',animate:true,dnd:true,checkbox:true"></ul>
 		</div>
 		<div data-options="region:'west',split:true" title="West" style="width:200px;">
 			<div class="easyui-accordion" data-options="fit:true,border:false">

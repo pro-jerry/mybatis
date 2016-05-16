@@ -15,4 +15,8 @@ public interface UserService {
 
 	List<Menu> getMenuByPidIsNull();
 
+	List<Menu> getMenuByScort();
+
+	Menu getById(int lastNum);
+
 }

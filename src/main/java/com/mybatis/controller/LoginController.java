@@ -35,7 +35,7 @@ public class LoginController {
 		
 		request.getSession().setAttribute("username", username);
 		
-		User user = userSerive.getUser(username,password);
+		User user = userSerive.getUser(username.trim(),password.trim());
 		if(null == user){
 			
 			return "error";
@@ -68,6 +68,7 @@ public class LoginController {
 				easyUITree.setText(menu.getName());
 				List<Menu> listMenuChild = userSerive.getMenuByPid(menu.getId());
 				List<EasyUITree> treeListChild = new ArrayList<EasyUITree>();
+				
 				if(null!=listMenuChild && listMenuChild.size()>0){
 					for (Menu menu2 : listMenuChild) {
 						
@@ -75,6 +76,20 @@ public class LoginController {
 						easyUITree2.setId(menu2.getId());
 						easyUITree2.setState("close");
 						easyUITree2.setText(menu2.getName());
+						
+						List<Menu> listMenuSunzi = userSerive.getMenuByPid(menu2.getId());
+						List<EasyUITree> treeListSunzi = new ArrayList<EasyUITree>();
+						if(listMenuSunzi!=null && listMenuSunzi.size()>0){
+							
+							for(Menu menu3:listMenuSunzi){
+								EasyUITree easyUITree3 = new EasyUITree();
+								easyUITree3.setId(menu3.getId());
+								easyUITree3.setState("close");
+								easyUITree3.setText(menu2.getName());
+								treeListSunzi.add(easyUITree3);
+							}
+						}
+						easyUITree2.setChildren(treeListSunzi);
 						treeListChild.add(easyUITree2);
 					}
 				}
@@ -88,7 +103,43 @@ public class LoginController {
 		return jsonObject;
 	}
 	
-	
+	@RequestMapping("getMenu1")
+	@ResponseBody
+	public Object  getMenu1(HttpServletRequest request){
+		
+		List<Menu> listMenu = userSerive.getMenuByScort();
+		List<EasyUITree> treeList = new ArrayList<EasyUITree>();
+		
+		if(listMenu!=null && listMenu.size()>0){
+			for(Menu menu1:listMenu){
+				EasyUITree tree = new EasyUITree();
+				EasyUITree treeSunZi = new EasyUITree();
+				int length = menu1.getScort().split(",").length;
+				if(length-1==1){
+					int lastNum = (int)menu1.getScort().charAt(length-1)-(int)'0';
+					Menu menu= userSerive.getById(lastNum);
+					tree.setId(lastNum);
+					tree.setState("open");
+					tree.setText(menu.getName());
+					
+				}
+				if(length-1==2){
+					EasyUITree treeErZi = new EasyUITree();
+					int lastNum = (int)menu1.getScort().charAt(length-1)-(int)'0';
+					Menu menu= userSerive.getById(lastNum);
+					treeErZi.setId(lastNum);
+					treeErZi.setState("open");
+					treeErZi.setText(menu.getName());
+//					tree.s
+//					treeErZi.setParent(parent);
+				}
+				
+				treeList.add(tree);
+			}
+		}
+		
+		return JSON.toJSON(treeList); 
+	}
 	
 	
 }
