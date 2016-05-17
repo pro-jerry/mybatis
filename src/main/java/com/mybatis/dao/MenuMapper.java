@@ -28,4 +28,6 @@ public interface MenuMapper {
 	List<Menu> getMenuByScort();
 
 	Menu getMenuById(int id);
+
+	List<Menu> getMenuByUserId(int userId);
 }

@@ -55,4 +55,10 @@ public class UserServiceImpl implements UserService{
 		return menuMapper.getMenuById(lastNum);
 	}
 
+	@Override
+	public List<Menu> getMenuByUserId(int id) {
+
+		return menuMapper.getMenuByUserId(id);
+	}
+
 }

@@ -1,6 +1,6 @@
 /*
 SQLyog v10.2 
-MySQL - 5.7.3-m13-log : Database - test
+MySQL - 5.5.20 : Database - test
 *********************************************************************
 */
 
@@ -74,11 +74,40 @@ CREATE TABLE `menu` (
   `level` int(20) DEFAULT NULL COMMENT '菜单级别',
   `scort` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 /*Data for the table `menu` */
 
-insert  into `menu`(`id`,`pid`,`name`,`level`,`scort`) values (1,NULL,'账户列表',0,',1'),(2,1,'修改手机号码',1,',1,2'),(3,NULL,'系统管理',0,',3'),(4,3,'管理员管理',1,',3,4'),(5,4,'菜单2-1-1',2,',3,4,5'),(6,1,'账户解冻',1,',1,6'),(7,1,'账户冻结',1,',1,7'),(8,3,'角色管理',1,',3,8');
+insert  into `menu`(`id`,`pid`,`name`,`level`,`scort`) values (1,NULL,'账户列表',0,',1'),(2,1,'修改手机号码',1,',1,2'),(3,NULL,'系统管理',0,',3'),(4,3,'管理员管理',1,',3,4'),(5,4,'管理员删除',2,',3,4,5'),(6,1,'账户解冻',1,',1,6'),(7,1,'账户冻结',1,',1,7'),(8,3,'角色管理',1,',3,8'),(9,4,'管理员编辑',NULL,NULL),(10,4,'管理员新增',NULL,NULL),(12,8,'设置权限',NULL,NULL),(13,8,'角色删除',NULL,NULL),(14,8,'角色编辑',NULL,NULL),(15,8,'角色新增',NULL,NULL),(16,NULL,'广告管理',NULL,NULL),(17,16,'图片上移',NULL,NULL),(18,16,'图片删除',NULL,NULL),(19,16,'图片上传',NULL,NULL);
+
+/*Table structure for table `role` */
+
+DROP TABLE IF EXISTS `role`;
+
+CREATE TABLE `role` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) DEFAULT NULL COMMENT '角色名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `role` */
+
+insert  into `role`(`id`,`name`) values (1,'admin'),(2,'管理员'),(3,'普通用户');
+
+/*Table structure for table `role_menu` */
+
+DROP TABLE IF EXISTS `role_menu`;
+
+CREATE TABLE `role_menu` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `roleId` int(20) DEFAULT NULL,
+  `menuId` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+
+/*Data for the table `role_menu` */
+
+insert  into `role_menu`(`id`,`roleId`,`menuId`) values (33,1,1),(34,1,3),(35,1,16),(36,2,3),(37,3,16);
 
 /*Table structure for table `user` */
 
@@ -92,11 +121,11 @@ CREATE TABLE `user` (
   `Email` varchar(30) DEFAULT NULL,
   `phone` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`username`,`password`,`name`,`Email`,`phone`) values (1,'hejun','123',NULL,NULL,NULL),(3,'li','1',NULL,NULL,NULL);
+insert  into `user`(`id`,`username`,`password`,`name`,`Email`,`phone`) values (1,'hejun','123',NULL,NULL,NULL),(3,'li','1',NULL,NULL,NULL),(4,'jian','1',NULL,NULL,NULL);
 
 /*Table structure for table `user login info` */
 
@@ -130,6 +159,21 @@ CREATE TABLE `user_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 /*Data for the table `user_info` */
+
+/*Table structure for table `user_role` */
+
+DROP TABLE IF EXISTS `user_role`;
+
+CREATE TABLE `user_role` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `userId` int(20) DEFAULT NULL,
+  `roleId` int(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `user_role` */
+
+insert  into `user_role`(`id`,`userId`,`roleId`) values (1,1,1),(2,3,3),(3,4,2);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

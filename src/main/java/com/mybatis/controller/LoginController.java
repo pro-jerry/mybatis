@@ -26,6 +26,7 @@ public class LoginController {
 	@Autowired
 	private UserService userSerive;
 	
+	@SuppressWarnings("unused")
 	@RequestMapping("/doLogin")
 	@ResponseBody
 	public String doLogin(HttpServletRequest request){
@@ -36,6 +37,8 @@ public class LoginController {
 		request.getSession().setAttribute("username", username);
 		
 		User user = userSerive.getUser(username.trim(),password.trim());
+		
+		request.getSession().setAttribute("userId", user.getId());
 		if(null == user){
 			
 			return "error";
@@ -56,8 +59,9 @@ public class LoginController {
 	@ResponseBody
 	public Object getMenu(HttpServletRequest request){
 		
-		List<Menu> listMenu = userSerive.getMenuByPidIsNull();
-		
+//		List<Menu> listMenu = userSerive.getMenuByPidIsNull();
+		System.out.println(request.getSession().getAttribute("userId"));
+		List<Menu> listMenu = userSerive.getMenuByUserId((int)request.getSession().getAttribute("userId"));
 		List<EasyUITree> treeList = new ArrayList<EasyUITree>();
 		
 		if(null!=listMenu&&listMenu.size()>0){
@@ -85,7 +89,7 @@ public class LoginController {
 								EasyUITree easyUITree3 = new EasyUITree();
 								easyUITree3.setId(menu3.getId());
 								easyUITree3.setState("close");
-								easyUITree3.setText(menu2.getName());
+								easyUITree3.setText(menu3.getName());
 								treeListSunzi.add(easyUITree3);
 							}
 						}
