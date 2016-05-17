@@ -59,8 +59,6 @@ public class LoginController {
 	@ResponseBody
 	public Object getMenu(HttpServletRequest request){
 		
-//		List<Menu> listMenu = userSerive.getMenuByPidIsNull();
-		System.out.println(request.getSession().getAttribute("userId"));
 		List<Menu> listMenu = userSerive.getMenuByUserId((int)request.getSession().getAttribute("userId"));
 		List<EasyUITree> treeList = new ArrayList<EasyUITree>();
 		
