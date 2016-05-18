@@ -1,17 +1,21 @@
 package com.mybatis.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.alibaba.fastjson.JSON;
 import com.mybatis.pojo.EasyUITree;
@@ -27,7 +31,6 @@ public class LoginController {
 	@Autowired
 	private UserService userSerive;
 	
-	@SuppressWarnings("unused")
 	@RequestMapping("/doLogin")
 	@ResponseBody
 	public String doLogin(HttpServletRequest request,HttpSession session){
@@ -56,7 +59,7 @@ public class LoginController {
 	}
 	
 	
-	@RequestMapping("getMenu")
+	@RequestMapping("/getMenu")
 	@ResponseBody
 	public Object getMenu(HttpServletRequest request){
 		
@@ -106,7 +109,11 @@ public class LoginController {
 		return jsonObject;
 	}
 	
-	
+	@RequestMapping("/SecondLogin.htm")
+	public String  login2(HttpServletRequest request,HttpSession session,HttpServletResponse response){
+		
+		return "redirect:/welcome/first.htm";
+	}
 	
 	
 }

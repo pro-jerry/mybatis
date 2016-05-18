@@ -19,7 +19,9 @@
 		<div data-options="region:'north'" style="height:50px">
 			欢迎回来:${username}
 		</div>
-		<div data-options="region:'south',split:true" style="height:50px;"></div>
+		<div data-options="region:'south',split:true" style="height:50px;">
+			 版本号：0.0.1
+		</div>
 		<div data-options="region:'east',split:true" title="East" style="width:180px;">
 			<ul id="east_tree" class="easyui-tree" data-options="url:'${prc}/login/getMenu.htm',method:'get',animate:true,dnd:true,checkbox:true"></ul>
 		</div>
@@ -36,13 +38,13 @@
 				</div>
 			</div>
 		</div>
-		<div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'">
+		<div data-options="region:'center',title:'欢迎登陆本系统',iconCls:'icon-ok'">
 			<div id="tt">
 				<div title="分页显示" style="padding:10px">
 					<table id="data"></table>
 				</div>
 			</div>
-			
+			<div id="weltab"></div>
 		</div>
 	</div>
 </body>
