@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,16 +30,16 @@ public class LoginController {
 	@SuppressWarnings("unused")
 	@RequestMapping("/doLogin")
 	@ResponseBody
-	public String doLogin(HttpServletRequest request){
+	public String doLogin(HttpServletRequest request,HttpSession session){
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		request.getSession().setAttribute("username", username);
+		session.setAttribute("username", username);
 		
 		User user = userSerive.getUser(username.trim(),password.trim());
 		
-		request.getSession().setAttribute("userId", user.getId());
+		session.setAttribute("userId", user.getId());
 		if(null == user){
 			
 			return "error";
@@ -106,48 +107,6 @@ public class LoginController {
 	}
 	
 	
-	/**
-	 * <href http://blog.csdn.net/zwx19921215/article/details/44467099/>
-	 * @param request
-	 * @return
-	 */
-	@RequestMapping("getMenu1")
-	@ResponseBody
-	public Object  getMenu1(HttpServletRequest request){
-		
-		List<Menu> listMenu = userSerive.getMenuByScort();
-		List<EasyUITree> treeList = new ArrayList<EasyUITree>();
-		
-		if(listMenu!=null && listMenu.size()>0){
-			for(Menu menu1:listMenu){
-				EasyUITree tree = new EasyUITree();
-				EasyUITree treeSunZi = new EasyUITree();
-				int length = menu1.getScort().split(",").length;
-				if(length-1==1){
-					int lastNum = (int)menu1.getScort().charAt(length-1)-(int)'0';
-					Menu menu= userSerive.getById(lastNum);
-					tree.setId(lastNum);
-					tree.setState("open");
-					tree.setText(menu.getName());
-					
-				}
-				if(length-1==2){
-					EasyUITree treeErZi = new EasyUITree();
-					int lastNum = (int)menu1.getScort().charAt(length-1)-(int)'0';
-					Menu menu= userSerive.getById(lastNum);
-					treeErZi.setId(lastNum);
-					treeErZi.setState("open");
-					treeErZi.setText(menu.getName());
-//					tree.s
-//					treeErZi.setParent(parent);
-				}
-				
-				treeList.add(tree);
-			}
-		}
-		
-		return JSON.toJSON(treeList); 
-	}
 	
 	
 }
