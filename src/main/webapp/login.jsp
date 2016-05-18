@@ -30,12 +30,25 @@
 				}
 			});
 		});
-		function a(){
-// 			$.post("http://www.66law.cn/ajax/postQuestion7.aspx", { phone: "15639895689", askt: "我怀孕了，赔钱！！！！",askc:"我怀孕了，赔钱！！！",CityID:"510102",t_code:"home" } );
+		
+		
+		$('#sub').click(function(){
 			
-		}
-		setInterval(a,3000);
+			$.ajax({
+				dataType:'json',
+				cache:false,
+				type:'post',
+				url:'${prc}/login/SecondLogin.htm',
+				data:{username:$('#u').val(),password:$('#p').val()},
+				success:function(msg){
+					
+										
+				}
+			});
 		});
+		
+		
+	});
 </script>
 <title>登录</title>
 </head>
@@ -46,13 +59,30 @@
 		        <input id="username" type="text" name="username"/>   
 		    </div>   
 		    <div>   
-		        <label>密码:</label>   
+		        <label>密&nbsp;码:</label>   
 		        <input id="pwd" type="password" name="password" />   
 		    </div>  
 		    <div>
 		    	<input type="button" value="注册"/>
 		    	<input id="submit" type="button" value="提交"/>
 		    </div>
-		</div>  
+		</div> 
+		<hr/>
+		<br/>
+		<div>   
+		    <div>   
+		        <label>用户名:</label>   
+		        <input id="u" type="text" name="username"/>   
+		    </div>   
+		    <div>   
+		        <label>密&nbsp;码:</label>   
+		        <input id="p" type="password" name="password" />   
+		    </div>  
+		    <div>
+		    	<input type="button" value="注册"/>
+		    	<input id="sub" type="button" value="提交"/>
+		    </div>
+		</div>
+		
 </body>
 </html>

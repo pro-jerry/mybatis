@@ -59,6 +59,7 @@
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
     
+    <!--  
     <filter>
     	<filter-name>Login1Filter</filter-name>
     	<filter-class>com.mybatis.tools.Login1Filter</filter-class>
@@ -67,5 +68,5 @@
     	<filter-name>Login1Filter</filter-name>
     	<url-pattern>*.htm</url-pattern>
     </filter-mapping>
-    
+    -->
 </web-app>
