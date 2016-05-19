@@ -26,7 +26,7 @@
 			
 		</div>
 		<div data-options="region:'south',split:true" style="height:50px;">
-			 版本号：0.0.1
+			版本号:
 		</div>
 		<div data-options="region:'east',split:true" title="East" style="width:180px;">
 <%-- 			<ul id="east_tree" class="easyui-tree" data-options="url:'${prc}/login/getMenu.htm',method:'get',animate:true,dnd:true,checkbox:true"></ul> --%>
@@ -36,12 +36,17 @@
 <!-- 				<div id="fenye" title="示例" data-options="selected:true" style="padding:10px;"> -->
 <!-- 					<ul id="tree"></ul>   -->
 <!-- 				</div> -->
-				<div title="Title1"  style="padding:10px;">
-					content2
-				</div>
-				<div title="Title2" style="padding:10px">
-					content3
-				</div>
+				<c:if test="${activeUser.menus!=null }">
+					<c:forEach items="${activeUser.menus }" var="menu">
+						<div title="${menu.name }"></div>
+					</c:forEach>
+				</c:if>
+<!-- 				<div title="Title1"  style="padding:10px;"> -->
+<!-- 					content2 -->
+<!-- 				</div> -->
+<!-- 				<div title="Title2" style="padding:10px"> -->
+<!-- 					content3 -->
+<!-- 				</div> -->
 			</div>
 		</div>
 		<div data-options="region:'center',title:'欢迎登陆本系统',iconCls:'icon-ok'">
