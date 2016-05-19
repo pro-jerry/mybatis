@@ -45,6 +45,9 @@
 										
 				}
 			});
+			window.location.href=
+				'${prc}/login/SecondLogin.htm?username='+$('#u').val()
+						+'&password='+$('#p').val()+'&valicode='+$('#yzm').val();
 		});
 		
 		
@@ -78,6 +81,12 @@
 		        <label>密&nbsp;码:</label>   
 		        <input id="p" type="password" name="password" />   
 		    </div>  
+		    </div> 
+		    <div>
+		    	<label>验证码:</label>
+		    	<input id="yzm" type="text" name="valicode" /> 
+		    	<img  src="${prc}/login/vilicode.htm" width="56" height="20" align='absMiddle'/>
+		    </div> 
 		    <div>
 		    	<input type="button" value="注册"/>
 		    	<input id="sub" type="button" value="提交"/>

@@ -51,6 +51,14 @@
         <property name="maxInMemorySize" value="40960" />  
     </bean> 
   	
+  	<!--拦截器 -->
+  	<mvc:interceptors>
+  		<mvc:interceptor>
+  			<!-- 用户认证拦截 -->
+			<mvc:mapping path="/**" />
+			<bean class="com.mybatis.controller.interceptor.LoginInterceptor"></bean>
+  		</mvc:interceptor>
+  	</mvc:interceptors>
     
                         
 </beans>
