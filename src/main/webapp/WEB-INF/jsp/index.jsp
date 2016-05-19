@@ -12,9 +12,13 @@
 <script type="text/javascript" src="${prc }/js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="${prc }/js/fenye.js"></script>
 <script type="text/javascript" src="${prc }/js/index.js"></script>
+<script type="text/javascript">
+
+</script>
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<div class="easyui-layout" data-options="fit:true">
 		<div data-options="region:'north'" style="height:50px">
 			<span style="padding-right: 20px; float: right;">
@@ -38,15 +42,24 @@
 <!-- 				</div> -->
 				<c:if test="${activeUser.menus!=null }">
 					<c:forEach items="${activeUser.menus }" var="menu">
-						<div title="${menu.name }"></div>
+<!-- 						<li> -->
+<!-- 							<div> -->
+<%-- 								<a title="${menu.name }" href="#" rel="${prc }/${menu.url}"> --%>
+<%-- 									${menu.name } --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
+						
+<!-- 						</li> -->
+					<ul class="easyui-tree"> 
+						<li>
+							<span>
+								<a href="javascript:addTab('${menu.name }','${prc }${menu.url}')">${menu.name }</a>
+							</span>   
+						</li> 
+					</ul> 
+					
 					</c:forEach>
 				</c:if>
-<!-- 				<div title="Title1"  style="padding:10px;"> -->
-<!-- 					content2 -->
-<!-- 				</div> -->
-<!-- 				<div title="Title2" style="padding:10px"> -->
-<!-- 					content3 -->
-<!-- 				</div> -->
 			</div>
 		</div>
 		<div data-options="region:'center',title:'欢迎登陆本系统',iconCls:'icon-ok'">
