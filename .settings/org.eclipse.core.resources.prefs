@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
 encoding//src/main/resources/Log4j.properties=UTF-8
+encoding//src/main/resources/anonymousURL.properties=UTF-8
+encoding//src/main/resources/commonURL.properties=UTF-8

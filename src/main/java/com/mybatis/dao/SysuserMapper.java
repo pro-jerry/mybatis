@@ -1,5 +1,8 @@
 package com.mybatis.dao;
 
+import java.util.List;
+
+import com.mybatis.domain.SysUserExample;
 import com.mybatis.pojo.Sysuser;
 
 public interface SysuserMapper {
@@ -14,4 +17,7 @@ public interface SysuserMapper {
     int updateByPrimaryKeySelective(Sysuser record);
 
     int updateByPrimaryKey(Sysuser record);
+
+	List<Sysuser> selectByExample(SysUserExample sysUserExample);
+
 }

@@ -1,4 +1,4 @@
-package com.mybatis.tools;
+package com.mybatis.utils;
 
 import java.io.IOException;
 

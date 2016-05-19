@@ -18,7 +18,7 @@ public class WelcomeController {
 	}
 	
 	//系统首页
-	@RequestMapping("/first.htm")
+	@RequestMapping("/first")
 	public String first(HttpServletRequest request)throws Exception{
 			
 			

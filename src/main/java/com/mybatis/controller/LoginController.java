@@ -18,9 +18,12 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.alibaba.fastjson.JSON;
+import com.mybatis.domain.ActiveUser;
+import com.mybatis.exception.CustomException;
 import com.mybatis.pojo.EasyUITree;
 import com.mybatis.pojo.Menu;
 import com.mybatis.pojo.User;
+import com.mybatis.service.SysService;
 import com.mybatis.service.UserService;
 
 
@@ -30,6 +33,9 @@ public class LoginController {
 
 	@Autowired
 	private UserService userSerive;
+	
+	@Autowired
+	private SysService sysService;
 	
 	@RequestMapping("/doLogin")
 	@ResponseBody
@@ -109,11 +115,35 @@ public class LoginController {
 		return jsonObject;
 	}
 	
-	@RequestMapping("/SecondLogin.htm")
-	public String  login2(HttpServletRequest request,HttpSession session,HttpServletResponse response){
+	@RequestMapping("/SecondLogin")
+	public String  login2(HttpServletRequest request,HttpSession session) throws Exception{
 		
-		return "redirect:/welcome/first.htm";
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String valicode = request.getParameter("valicode");
+		
+		//校验验证码，防止恶性攻击
+		//从session获取正确验证码
+		String validateCode = (String) session.getAttribute("validateCode");
+				
+		//输入的验证和session中的验证进行对比 
+		if(!valicode.equals(validateCode)){
+			//抛出异常
+			throw new CustomException("验证码输入错误");
+		}
+		
+		
+		ActiveUser activeUser = sysService.authenticat(username,password);
+		session.setAttribute("activeUser", activeUser);
+		
+		
+		return "forward:/login/toLogin.htm";
 	}
 	
 	
+	@RequestMapping("/vilicode")
+	public String validatecode(){
+		
+		return "vilicode";
+	}
 }
