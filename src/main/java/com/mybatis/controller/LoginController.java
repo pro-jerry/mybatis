@@ -58,7 +58,8 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/toLogin")
-	public String toLogin(HttpServletRequest request){
+	public String toLogin(HttpServletRequest request,HttpSession session){
+		
 		
 		
 		return "index";
@@ -119,20 +120,18 @@ public class LoginController {
 	@RequestMapping("/SecondLogin")
 	public String  login2(HttpServletRequest request,HttpSession session) throws Exception{
 		
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		String valicode = request.getParameter("valicode");
+		String username = request.getParameter("username").trim();
+		String password = request.getParameter("password").trim();
+		String valicode = request.getParameter("valicode").trim();
 		
 		//校验验证码，防止恶性攻击
 		//从session获取正确验证码
 		String validateCode = (String) session.getAttribute("validateCode");
-				
 		//输入的验证和session中的验证进行对比 
 		if(!valicode.equals(validateCode)){
 			//抛出异常
 			throw new CustomException("验证码输入错误");
 		}
-		
 		
 		ActiveUser activeUser = sysService.authenticat(username,password);
 		session.setAttribute("activeUser", activeUser);
