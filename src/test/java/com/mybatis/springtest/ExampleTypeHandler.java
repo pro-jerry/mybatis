@@ -1,4 +1,4 @@
-package com.mybatis;
+package com.mybatis.springtest;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;

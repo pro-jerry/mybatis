@@ -8,9 +8,11 @@
 <c:set var="prc"  value="${pageContext.request.contextPath }"/>
 <link rel="stylesheet" type="text/css" href="${prc }/css/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="${prc }/css/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="${prc }/css/jquery-ui-1.10.4.custom.css">
 <script type="text/javascript" src="${prc }/js/jquery.min.js"></script>
 <script type="text/javascript" src="${prc }/js/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="${prc }/js/fenye.js"></script>
+<%-- <script type="text/javascript" src="${prc }/js/jquery-ui-1.10.4.custom.js"></script> --%>
+<%-- <script type="text/javascript" src="${prc }/js/fenye.js"></script> --%>
 <script type="text/javascript" src="${prc }/js/index.js"></script>
 <script type="text/javascript">
 
@@ -41,6 +43,7 @@
 <!-- 					<ul id="tree"></ul>   -->
 <!-- 				</div> -->
 				<c:if test="${activeUser.menus!=null }">
+<<<<<<< HEAD
 					<c:forEach items="${activeUser.menus }" var="menu">
 <!-- 						<li> -->
 <!-- 							<div> -->
@@ -59,17 +62,42 @@
 					</ul> 
 					
 					</c:forEach>
+=======
+					<ul>
+						<c:forEach items="${activeUser.menus }" var="menu">
+							<li>
+								<div>
+									<a title="${menu.name }" href="#" rel="${prc }/${menu.url}">
+										<a href=javascript:addTab('${menu.name}','${prc }${menu.url}')>${menu.name}</a>
+									</a>
+								</div>
+							</li>
+						
+						</c:forEach>
+						<li>
+							<div><a>
+								<a  href="#" id="fenye">分页实例</a>
+								</a>
+							</div>
+						</li>
+					</ul>
+>>>>>>> refs/remotes/origin/dev1
 				</c:if>
 			</div>
 		</div>
 		<div data-options="region:'center',title:'欢迎登陆本系统',iconCls:'icon-ok'">
-			<div id="tt">
-				<div title="分页显示" style="padding:10px">
-					<table id="data"></table>
-				</div>
+			<div id="tt" class="easyui-tabs" data-options="fit:true">
+<!-- 				<div id="dataDiv"> -->
+<!-- 					<table id="data"></table> -->
+<!-- 				</div> -->
+					<div id="weltab" title="欢迎页" data-options="fit:true,iconCls:'icon-reload'">
+						欢迎登陆
+					</div>
+					
 			</div>
-			<div id="weltab"></div>
+			
 		</div>
 	</div>
+	
 </body>
 </html>
