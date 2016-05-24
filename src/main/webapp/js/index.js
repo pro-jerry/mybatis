@@ -56,34 +56,9 @@ var addTab = function(subtitle,url){
 	}
 	
 	
-function js_fenye(){
+function fenye(){
 	
-	/*
-	$('#tt').tabs('add',{
-		title:'分页实例',
-		closable:true
-	});
 	
-	$('#tt').append('<div><table id="data" class="easyui-datagrid"></table></div>');
-	$('#data').datagrid({
-		
-		url:'../easyui/listCountry.htm',
-		title:'Country',
-		fitColumns:true,
-		striped:true,
-		columns:[[  
-		          {field:'id',title:'ID',width:80},    
-		          {field:'countryname',title:'国家名称',width:80},    
-		          {field:'countrycode',title:'国家代码',width:100},    
-		      ]],
-		pagePosition:'bottom',
-		pagination:true,
-		pageNumber:1,
-		pageSize:10,
-		pageList:[10,20,30,40,50]
-
-	});
-	*/
 	console.log('1');
 }	
 	

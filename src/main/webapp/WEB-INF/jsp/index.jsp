@@ -15,7 +15,32 @@
 <%-- <script type="text/javascript" src="${prc }/js/fenye.js"></script> --%>
 <script type="text/javascript" src="${prc }/js/index.js"></script>
 <script type="text/javascript">
+ function fenye(){
+	 $('#tt').tabs('add',{
+			title:'分页实例',
+			closable:true
+		});
+	 
+	var tt= $('#tt').append('<div><table id="data" style="border: 1px"></table></div>');
+	 $('#data').datagrid({
+			
+			url:'../easyui/listCountry.htm',
+			title:'Country',
+			fitColumns:true,
+			striped:true,
+			columns:[[  
+			          {field:'id',title:'ID',width:80},    
+			          {field:'countryname',title:'国家名称',width:80},    
+			          {field:'countrycode',title:'国家代码',width:100},    
+			      ]],
+			pagePosition:'bottom',
+			pagination:true,
+			pageNumber:1,
+			pageSize:10,
+			pageList:[10,20,30,40,50]
 
+		});
+ }
 </script>
 <title>Insert title here</title>
 </head>
@@ -55,11 +80,12 @@
 						
 						</c:forEach>
 						<li>
-							<div><a>
-								<a  href="#" id="fenye">分页实例</a>
-								</a>
+							<div>
+								<a  href="#" onclick="javascript:fenye();">分页实例</a>
+								<table style="border: 1px"></table>
 							</div>
 						</li>
+						
 					</ul>
 				</c:if>
 			</div>
