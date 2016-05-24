@@ -81,7 +81,6 @@
 							</div>
 						</li>
 					</ul>
->>>>>>> refs/remotes/origin/dev1
 				</c:if>
 			</div>
 		</div>
