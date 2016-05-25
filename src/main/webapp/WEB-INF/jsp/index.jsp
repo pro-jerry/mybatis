@@ -68,6 +68,26 @@
 <!-- 					<ul id="tree"></ul>   -->
 <!-- 				</div> -->
 				<c:if test="${activeUser.menus!=null }">
+<<<<<<< HEAD
+					<c:forEach items="${activeUser.menus }" var="menu">
+<!-- 						<li> -->
+<!-- 							<div> -->
+<%-- 								<a title="${menu.name }" href="#" rel="${prc }/${menu.url}"> --%>
+<%-- 									${menu.name } --%>
+<!-- 								</a> -->
+<!-- 							</div> -->
+						
+<!-- 						</li> -->
+					<ul class="easyui-tree"> 
+						<li>
+							<span>
+								<a href="javascript:addTab('${menu.name }','${prc }${menu.url}')">${menu.name }</a>
+							</span>   
+						</li> 
+					</ul> 
+					
+					</c:forEach>
+=======
 					<ul>
 						<c:forEach items="${activeUser.menus }" var="menu">
 							<li>
