@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
+import java.util.Scanner;
 
 import org.junit.Test;
 
@@ -57,6 +58,10 @@ public class ChannelTest {
 		toChannel.transferFrom(fromChannel, position, count);
 	}
 	
+	/**
+	 * transferTo()方法将数据从FileChannel传输到其他的channel中
+	 * @throws IOException
+	 */
 	@Test
 	public void transferTo() throws IOException{
 		
@@ -81,10 +86,12 @@ public class ChannelTest {
 	@Test
 	public void testReadFromChannel() throws IOException{
 		
-		RandomAccessFile file = new RandomAccessFile(new File("e://1.txt"), "rw");
+		Charset charset = Charset.forName("utf-8");
+		
+		RandomAccessFile file = new RandomAccessFile(new File("e://2.txt"), "rw");
 		FileChannel channel = file.getChannel();
 		
-		ByteBuffer buf = ByteBuffer.allocate(4000);
+		ByteBuffer buf = ByteBuffer.allocate(40000);
 		int byteRead = channel.read(buf);
 		
 		StringBuilder sb = new StringBuilder();
@@ -98,10 +105,9 @@ public class ChannelTest {
 			buf.clear();
 			byteRead = channel.read(buf);
 		}
-//		System.out.println(sb.toString());
-		String str = sb.toString();
-		String s = new String(str.getBytes(),"utf-8");
-		System.out.println(s);
+		
+		System.out.println(sb.toString());
+		
 		
 	}
 	/**
@@ -114,8 +120,8 @@ public class ChannelTest {
 		@SuppressWarnings("resource")
 		RandomAccessFile file = new RandomAccessFile("e://2.txt", "rw");
 		FileChannel channel = file.getChannel();
-		String newData = "New String to write to ..... "+System.currentTimeMillis();
-		ByteBuffer buf = ByteBuffer.allocate(60);
+		String newData = "New String to write to 我是阿凡达 ..... "+System.currentTimeMillis();
+		ByteBuffer buf = ByteBuffer.allocate(1024);
 		buf.clear();
 		
 		buf.put(newData.getBytes());
@@ -136,8 +142,14 @@ public class ChannelTest {
 	@Test
 	public void test() throws IOException{
 		
-		
+		 Scanner scanner = new Scanner(new FileInputStream(new File("e://2.txt")), "utf-8");
+	        while(scanner.hasNext())
+	            System.out.println(scanner.nextLine());
 		
 	}
+	
+	
+	
+	
 	
 }
