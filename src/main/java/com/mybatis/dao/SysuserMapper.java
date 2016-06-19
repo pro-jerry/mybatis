@@ -20,4 +20,6 @@ public interface SysuserMapper {
 
 	List<Sysuser> selectByExample(SysUserExample sysUserExample);
 
+	List<Sysuser> selectAll();
+
 }
