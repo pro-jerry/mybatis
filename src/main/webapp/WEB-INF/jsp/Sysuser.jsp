@@ -23,6 +23,7 @@
 			 	<table class="table table-striped">
 			 		<thead>
 				 		<tr>
+				 			<th></th>
 				 			<th>登录名</th>
 				 			<th>用户名</th>
 				 			<th>登录密码</th>
