@@ -25,7 +25,7 @@ public class UserController {
 	@RequestMapping("/query")
 	public String query(HttpServletRequest request,
 			@RequestParam(required = false, defaultValue = "1") int pageNum,
-			@RequestParam(required = false, defaultValue = "10") int pageSize){
+			@RequestParam(required = false, defaultValue = "5") int pageSize){
 		PageHelper.startPage(pageNum, pageSize);
 		List<Sysuser> list = sysuserService.query();
 		PageInfo pageInfo = new PageInfo(list);
