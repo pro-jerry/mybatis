@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.github.pagehelper.PageHelper;
 import com.mybatis.pojo.Sysuser;
 import com.mybatis.service.SysuserService;
 
@@ -23,6 +24,7 @@ public class UserController {
 	public String query(HttpServletRequest request){
 		
 		List<Sysuser> list = sysuserService.query();
+		System.out.println(123);
 		request.setAttribute("SysuserList", list);
 		return "Sysuser";
 	}
