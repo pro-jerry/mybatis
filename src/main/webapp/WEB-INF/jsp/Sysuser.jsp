@@ -31,7 +31,7 @@
 				 		</tr>
 			 		</thead>
 			 		<tbody>
-				 		<c:forEach items="${SysuserList}" var="sysuser">
+				 		<c:forEach items="${page.list}" var="sysuser">
 				 			<tr class="info">
 				 				<td><input class="states" type="checkbox" name="id" value="${sysuser.id }"/></td>
 				 				<td>${sysuser.usercode}</td>
@@ -44,27 +44,28 @@
 			 	</table>
 			 	<div class="pagination">
 					<ul>
-						<li>
-							<a href="#">上一页</a>
-						</li>
-						<li>
-							<a href="#">1</a>
-						</li>
-						<li>
-							<a href="#">2</a>
-						</li>
-						<li>
-							<a href="#">3</a>
-						</li>
-						<li>
-							<a href="#">4</a>
-						</li>
-						<li>
-							<a href="#">5</a>
-						</li>
-						<li>
-							<a href="#">下一页</a>
-						</li>
+						<c:if test="${page.hasPreviousPage}">
+							<li>
+								<a href="${pageContext.request.contextPath}/user/query.htm?pageNum=${page.prePage}&pageSize=${page.pageSize}">上一页</a>
+							</li>
+						</c:if>
+						<c:forEach items="${page.navigatepageNums}" var="nav">
+							<c:if test="${nav == page.pageNum}">
+								<li >
+									<a href="#">${nav}</a>
+								</li>
+							</c:if>
+							<c:if test="${nav != page.pageNum}">
+								<li >
+									<a href="${pageContext.request.contextPath}/user/query.htm?pageNum=${nav}&pageSize=${page.pageSize}">${nav}</a>
+								</li>
+							</c:if>
+						</c:forEach>
+						<c:if test="${page.hasNextPage}">
+							<li>
+								<a href="${pageContext.request.contextPath}/user/query.htm?pageNum=${page.nextPage}&pageSize=${page.pageSize}">下一页</a>
+							</li>
+						</c:if>
 					</ul>
 			</div>
 		 	</div>
