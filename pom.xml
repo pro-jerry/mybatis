@@ -13,6 +13,7 @@
 	<spring.version>4.0.1.RELEASE</spring.version>
 	<!-- mybatis版本号 -->
 	<mybatis.version>3.2.6</mybatis.version>
+	<mapper.version>3.3.6</mapper.version>
   </properties> 
   <dependencies>
     <dependency>
@@ -203,9 +204,23 @@
 	    <artifactId>asm-tree</artifactId>
 	    <version>3.3.1</version>
 	</dependency>
-	
-	
+	<dependency>
+	    <groupId>com.github.pagehelper</groupId>
+	    <artifactId>pagehelper</artifactId>
+	    <version>4.1.6</version>
+	</dependency>
+	<dependency>
+       <groupId>tk.mybatis</groupId>
+       <artifactId>mapper</artifactId>
+       <version>${mapper.version}</version>
+   </dependency>
+   <dependency>
+      <groupId>com.github.jsqlparser</groupId>
+      <artifactId>jsqlparser</artifactId>
+      <version>0.9.1</version>
+    </dependency>
   </dependencies>
+  
   <build>
     <finalName>mybatis</finalName>
   </build>

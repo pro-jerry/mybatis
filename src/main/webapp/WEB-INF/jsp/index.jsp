@@ -68,7 +68,6 @@
 <!-- 					<ul id="tree"></ul>   -->
 <!-- 				</div> -->
 				<c:if test="${activeUser.menus!=null }">
-<<<<<<< HEAD
 					<c:forEach items="${activeUser.menus }" var="menu">
 <!-- 						<li> -->
 <!-- 							<div> -->
@@ -87,13 +86,12 @@
 					</ul> 
 					
 					</c:forEach>
-=======
 					<ul>
 						<c:forEach items="${activeUser.menus }" var="menu">
 							<li>
 								<div>
-									<a title="${menu.name }" href="#" rel="${prc }/${menu.url}">
-										<a href=javascript:addTab('${menu.name}','${prc }${menu.url}')>${menu.name}</a>
+									<a title="${menu.name }" href="#" rel="${prc }${menu.url}">
+										<a href="javascript:addTab('${menu.name}','${prc}${menu.url}')">${menu.name}</a>
 									</a>
 								</div>
 							</li>

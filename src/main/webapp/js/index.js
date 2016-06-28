@@ -16,7 +16,6 @@ $(document).ready(function(){
 		});
 		   
 		$('#tt').append($.parser.parse($('<div><table id="data"></table></div>')));
-		console.log('1');
 		$('#data').datagrid({
 			
 			url:'../easyui/listCountry.htm',
@@ -43,38 +42,20 @@ $(document).ready(function(){
  * @param name 标题
  * @param url	访问地址
  */
-<<<<<<< HEAD
 var addTab = function(name,url){
+	
 	if(!$('#tt').tabs('exists',name)){
 		
 		$('#tt').tabs('add',{
 			title:name,
 			fit:true,
-			content:'content',
+			closable:true,
+			content:'<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>'
 		});
 	}else{
 		//如果tabs已创建则选中
 		$('#tt').tabs('select',name);
 	}
-=======
-var addTab = function(subtitle,url){
-	
-	if(!$('#tt').tabs('exists',subtitle)){
-		$('#tt').tabs('add',{
-			title:subtitle,
-			closable:true
-		});
-	}else{
-		//如果tabs已创建则选中
-		$('#tt').tabs('select',subtitle);
-	}
-	
-	
-function fenye(){
-	
-	
-	console.log('1');
 }	
->>>>>>> refs/remotes/origin/dev1
+
 	
-}

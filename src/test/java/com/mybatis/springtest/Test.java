@@ -3,7 +3,6 @@ package com.mybatis.springtest;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -12,6 +11,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import tk.mybatis.mapper.entity.Example;
 
 import com.mybatis.dao.CountryMapper;
 import com.mybatis.pojo.Country;
@@ -77,4 +78,22 @@ public class Test extends BasicTest{
 			session.close();
 		}
 	}
+	
+	private static SqlSessionFactory sqlSessionFactory;
+	
+	@org.junit.Test
+	public void testFenye() throws IOException{
+		
+		/*
+		String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory  sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		
+		SqlSession session = sqlSessionFactory.openSession();
+		CountryMapper countryMapper = session.getMapper(CountryMapper.class);
+		*/
+		
+	}
+	
+	
 }

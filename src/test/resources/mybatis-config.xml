@@ -8,11 +8,19 @@
 <!-- 	 	<setting name="lazyLoadingEnabled" value="true"/> -->
 <!--   </settings> -->
   <typeAliases>
-  		
+  	 <typeAlias alias="Country" type="com.mybatis.pojo.Country"/>
   </typeAliases>
   <typeHandlers>
   	<package name="com.mybatis.ExampleTypeHandler"/>
   </typeHandlers>
+  <plugins>
+  	<plugin interceptor="com.github.pagehelper.PageHelper">
+  		<property name="dialect" value="mysql"/>
+  		<property name="offsetAsPageNum" value="true"/>
+  		<property name="rowBoundsWithCount" value="true"/>
+  		<property name="reasonable" value="true"/>
+  	</plugin>
+  </plugins>
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>

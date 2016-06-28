@@ -44,22 +44,6 @@
 <title>登录</title>
 </head>
 <body>
-<!-- 		<div>    -->
-<!-- 		    <div>    -->
-<!-- 		        <label>用户名:</label>    -->
-<!-- 		        <input id="username" type="text" name="username"/>    -->
-<!-- 		    </div>    -->
-<!-- 		    <div>    -->
-<!-- 		        <label>密&nbsp;码:</label>    -->
-<!-- 		        <input id="pwd" type="password" name="password" />    -->
-<!-- 		    </div>   -->
-<!-- 		    <div> -->
-<!-- 		    	<input type="button" value="注册"/> -->
-<!-- 		    	<input id="submit" type="button" value="提交"/> -->
-<!-- 		    </div> -->
-<!-- 		</div>  -->
-<!-- 		<hr/> -->
-<!-- 		<br/> -->
 		<center align="center">   
 		    <form action="${prc}/login/SecondLogin.htm" method="post" >
 			<div>   
