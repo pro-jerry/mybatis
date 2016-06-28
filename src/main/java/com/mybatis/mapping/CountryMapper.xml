@@ -17,8 +17,6 @@
   	limit #{start,jdbcType=INTEGER},#{number,jdbcType=INTEGER} 
   	
   </select>
-  
-  
   <select id="selectCount" resultType="java.lang.Integer">
   	select 
   	count(*)

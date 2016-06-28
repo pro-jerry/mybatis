@@ -9,6 +9,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
+import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.mybatis.dao.CountryMapper;
@@ -17,6 +19,8 @@ import com.mybatis.pojo.Country;
 
 public class Test extends BasicTest{
 
+	static Logger log = Logger.getLogger(Test.class.getName());
+	
 	@Autowired
 	private CountryMapper countryMapper;
 	
@@ -31,6 +35,19 @@ public class Test extends BasicTest{
 		System.out.println(b);
 		
 	}
+	
+	@org.junit.Test
+	public void insertCountry(){
+		
+		for(int i=1;i<100;i++){
+								
+			System.out.println("INSERT INTO TableName(Id,countryname,countrycode) VALUES("+i+",A,A);");
+		}
+		
+		
+		
+	}
+	
 	
 	@org.junit.Test
 	public void sqlSessionTest() throws IOException{
