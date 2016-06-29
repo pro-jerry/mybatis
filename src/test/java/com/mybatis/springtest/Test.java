@@ -8,6 +8,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import tk.mybatis.mapper.entity.Example;
@@ -18,6 +19,9 @@ import com.mybatis.pojo.Country;
 
 public class Test extends BasicTest{
 
+	
+	private Logger log = Logger.getLogger(Test.class.getName());
+	
 	@Autowired
 	private CountryMapper countryMapper;
 	
@@ -78,5 +82,12 @@ public class Test extends BasicTest{
 		
 	}
 	
-	
+	@org.junit.Test
+	public void testLog4j(){
+		
+		 log.trace("Trace Message!");
+		 log.info("123");
+		 log.debug("456");
+		 log.error("error");
+	}
 }
