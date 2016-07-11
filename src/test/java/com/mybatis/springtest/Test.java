@@ -22,6 +22,7 @@ public class Test extends BasicTest{
 
 	static Logger log = Logger.getLogger(Test.class.getName());
 	
+	
 	@Autowired
 	private CountryMapper countryMapper;
 	
@@ -95,5 +96,12 @@ public class Test extends BasicTest{
 		
 	}
 	
-	
+	@org.junit.Test
+	public void testLog4j(){
+		
+		 log.trace("Trace Message!");
+		 log.info("123");
+		 log.debug("456");
+		 log.error("error");
+	}
 }
