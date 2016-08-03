@@ -21,8 +21,8 @@ import com.mybatis.pojo.Country;
 @Transactional
 public class Test extends BasicTest{
 
-	static Logger log = Logger.getLogger(Test.class.getName());
 	
+	private Logger log = Logger.getLogger(Test.class.getName());
 	
 	@Autowired
 	private CountryMapper countryMapper;
