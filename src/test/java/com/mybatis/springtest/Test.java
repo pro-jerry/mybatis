@@ -9,15 +9,16 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import tk.mybatis.mapper.entity.Example;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import com.mybatis.dao.CountryMapper;
+import com.mybatis.exception.CustomException;
 import com.mybatis.pojo.Country;
 
-
+@Transactional
 public class Test extends BasicTest{
 
 	static Logger log = Logger.getLogger(Test.class.getName());
@@ -104,4 +105,48 @@ public class Test extends BasicTest{
 		 log.debug("456");
 		 log.error("error");
 	}
+	
+	
+	/**
+	 * spring回滚测试
+	 * @throws CustomException 
+	 */
+	@org.junit.Test
+//	@Transactional(propagation=Propagation.REQUIRED)
+	public void testRollBack() throws CustomException{
+		
+		Country country = new Country();
+		country.setId(184);
+		country.setCountrycode("B");
+		country.setCountryname("ABC");
+		
+//		try{
+			countryMapper.insert(country);
+			int i = 4/0;
+			
+//		}catch(RuntimeException e){
+//			throw new CustomException("country插入失败");
+//			e.printStackTrace();
+//			throw new RuntimeException();
+//			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+//		}
+		
+	}
+		@org.junit.Test
+		@Transactional(propagation=Propagation.NESTED,rollbackForClassName="Exception")
+		public void testRollBack1() throws CustomException{
+			
+			Country country = new Country();
+			country.setId(184);
+			country.setCountrycode("B");
+			country.setCountryname("ABC");
+			
+			countryMapper.insert(country);
+			int i = 4/0;
+			
+		}
+	
+	
+	
+	
 }
